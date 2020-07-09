@@ -4,11 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --testEnvironment=node --verbose --forceExit --watchAll --maxWorkers=1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.9.22",
+    "node-mocks-http": "^1.8.1",
+    "supertest": "^4.0.2"
+  },
+  "devDependencies": {
+    "jest": "^26.1.0"
   }
 }

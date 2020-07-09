@@ -1,10 +1,12 @@
 const express = require('express')
-const app = express()
+const app = express();
+const routes = require('./routes/todo.routes')
+const conexao = require('./mongodb.connect/monodb.connect')
+conexao.connect();
 
-app.get('/', (req, res){
-    res.send("Hellow");
-});
+app.use(express.json())
 
-app.listen(3000, ()=>{
-    console.log("serve instalado");
-});
+app.use("/", routes)
+
+
+module.exports = app;
